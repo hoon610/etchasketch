@@ -27,7 +27,7 @@ h1{
     margin-right: 70px;
 }
 
-#resize, #eraser, #clear{
+.buttonStyle{
     background-color: white;
     color: gray;
     height: 40px;
@@ -45,9 +45,49 @@ input[type='color'] {
     height: 80px;
     border: none;
     align-self: center;
-    border-radius: 50%;
+   
     padding: 0;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
+.on{
+    border-color: grey;
+}
+p{
+    margin-bottom: 3px;
+    margin-top: 50px;
+    display: flex;
+}
+img{
+    width: 20px;
+    height: auto;
+    display: block;
+    margin-left: 6px;
+    
+}
+.sliderContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.valueContainer{
+    margin-bottom: 6px;
+}
+#demo{
+    font-size: 24px;
+}
+#slider{
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+

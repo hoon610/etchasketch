@@ -15,17 +15,27 @@
     <h1>Etch a sketch</h1>
     <div id="content">
         <div id ="options">
-            <button id="resize" class="button">RESIZE</button>
+            <div class="sliderContainer">
+                <div class="valueContainer">
+                    <span id="demo">16 x 16</span>
+                </div>
+                <input type="range" min="1" max="150" value="16" id="slider">
+            </div>
+            
+            
             
             <input type="color"  class="button" id="colorPicker">
-              
-            <button id="eraser"  class="button">ERASER</button>
-            <button id="clear"  class="button">CLEAR</button>
+            <button id="black"  class="button buttonStyle">BLACK</button> 
+            <button id="eraser"  class="button buttonStyle">ERASER</button>
+            <button id="rainbow"  class="button buttonStyle">RAINBOW</button>
+            <button id="clear"  class="button buttonStyle">CLEAR</button>
         </div>
         <div id="container">
 
         </div>
     </div>
+    <p>Copyright © 2023 Hoon Kang<a id = "link" href="https://github.com/hoon610" target="_blank">
+        <img src="images/githublogo"></a></p>
 </body>
 
 </html>
