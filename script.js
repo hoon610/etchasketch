@@ -1,5 +1,6 @@
-let dimensions = 16;
+let dimensions = 100;
 const container = document.getElementById("container");
+let color = "black";
 
 for (i = dimensions; i > 0; i--){
     let row = document.createElement("div");
@@ -20,6 +21,14 @@ for (let i = 0; i < gridRows.length; i++) {
     }
 
   }
+  const pixels = document.getElementsByClassName("pixel");
+  
+  for (let i = 0; i < pixels.length; i++) {
+    pixels[i].addEventListener("mouseover", colorOver);
+  }
+  function colorOver(event) {  
+        event.target.style.backgroundColor = String(color);
+   };
 
 
  
