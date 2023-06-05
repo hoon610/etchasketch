@@ -11,13 +11,13 @@ function draw() {
     for (let i = 0; i < gridRows.length; i++) {
         const gridRow = gridRows[i];
 
-        gridRow.style.height = `${800 / dimensions}px`;
-        gridRow.style.minWidth = "800px";
+        gridRow.style.height = `${650 / dimensions}px`;
+        gridRow.style.minWidth = "650px";
         gridRow.style.display = "flex";
         for (let j = dimensions; j > 0; j--) {
             let pixel = document.createElement("div");
-            pixel.style.height = `${800 / dimensions}px`;
-            pixel.style.width = `${800 / dimensions}px`;
+            pixel.style.height = `${650 / dimensions}px`;
+            pixel.style.width = `${650 / dimensions}px`;
             gridRow.appendChild(pixel).className = "pixel";
         }
 
@@ -41,11 +41,29 @@ function redraw() {
     draw();
 }
 
-
-
 function colorOver(event) {
     event.target.style.backgroundColor = String(color);
 };
+
+const colorPicker = document.getElementById("colorPicker");
+colorPicker.addEventListener("input", changeColor);
+
+function changeColor(event) {
+     color = event.target.value;
+
+};
+
+const buttons = document.getElementsByClassName("button");
+
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("mouseenter", function(){
+        this.style.transform = "scale(1.1)"
+    });
+    buttons[i].addEventListener("mouseleave", function(){
+        this.style.transform = "scale(1.0)";
+    })
+}
+
 
 
 
