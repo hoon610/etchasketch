@@ -8,10 +8,18 @@ for (i = dimensions; i > 0; i--){
 const gridRows = document.getElementsByClassName("gridRow");
 for (let i = 0; i < gridRows.length; i++) {
     const gridRow = gridRows[i];
-    
-    // Set the height property
+
     gridRow.style.height = `${800 / dimensions}px`;
-    
-    // Set the min-width property
     gridRow.style.minWidth = "800px";
+    gridRow.style.display = "flex";
+    for (let j = dimensions; j > 0; j--){
+        let pixel = document.createElement("div");
+        pixel.style.height = `${800 / dimensions}px`;
+        pixel.style.width = `${800 / dimensions}px`;
+        gridRow.appendChild(pixel).className = "pixel";
+    }
+
   }
+
+
+ 
